@@ -8,19 +8,6 @@ from pdf_generator import generate_pdf
 
 app = FastAPI()
 
-# local_db = [
-#     {
-#         "id": 1,
-#         "name": "John Doe",
-#         "skills": ["Python", "Django", "FastAPI", "SQLAlchemy"]
-#     },
-#     {
-#         "id": 2,
-#         "name": "John Smith",
-#         "skills": ["Python", "Django", "FastAPI", "SQLAlchemy"]
-#     }
-# ]
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}

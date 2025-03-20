@@ -17,20 +17,6 @@ def get_skills(experience):
             skills.append(skill)
     return ", ".join(skills)
 
-# def extract_experience(description):
-#     patterns = [
-#         '\d+-\d+ \\xa0years',
-#         '\d+ \\ax0years',
-#         '\d+ to \d+ \\ax0years',
-#         '\d+ - \d+ \\ax0years',
-#         '\d+ \+ \\ax0years'
-#     ]
-#     for pattern in patterns:
-#         match = re.search(pattern, description)
-#         if match:
-#             return match.group(0)
-#     return "Not specified"
-
 def fetch_rss_data():
     url = "https://jobs.dou.ua/vacancies/feeds/?category=Python"
     headers = {
@@ -59,8 +45,3 @@ def fetch_rss_data():
         })
     
     return rss_candidates
-
-# Example usage
-# candidates = fetch_rss_data()
-# for candidate in candidates:
-#     print(candidate)
